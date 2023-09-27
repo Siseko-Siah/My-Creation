@@ -1,0 +1,266 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+@{
+    ViewBag.Title = "Home";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Vehicles</h5>
+                    <p class="card-text">357</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Active Vehicles</h5>
+                    <p class="card-text">295</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Average Speed</h5>
+                    <p class="card-text">55 km/h</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Fuel Efficiency</h5>
+                    <p class="card-text">19.8 MPG</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Notifications</h5>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="row mt-4">
+    <div class="col-lg-8">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Vehicle Status</h5>
+                <canvas id="vehicleStatusChart" width="400" height="150"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Real-Time Data</h5>
+                <div id="realTimeDataWidget">
+                    Current Time: <span id="currentTime">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    
+    var ctx = document.getElementById('vehicleStatusChart').getContext('2d');
+    var vehicleStatusChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Running', 'Stopped', 'Idle', 'Offline'],
+            datasets: [{
+                label: 'Vehicle Status',
+                data: [35, 20, 10, 5], 
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(54, 162, 235, 1)',
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    
+    function updateRealTimeData() {
+        var currentTimeElement = document.getElementById('currentTime');
+        var currentTime = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = currentTime;
+    }
+
+    
+    setInterval(updateRealTimeData, 1000);
+
+    
+    updateRealTimeData();
+</script>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/signalr/hubs"></script>
+
+<script>
+    
+    var hub = $.connection.realTimeHub;
+
+    $.connection.hub.start();
+
+    
+    hub.client.updateChart = function (data) {
+
+        vehicleStatusChart.data.datasets[0].data = data;
+        vehicleStatusChart.update();
+    };
+
+    
+    function updateRealTimeData() {
+        var currentTimeElement = document.getElementById('currentTime');
+        var currentTime = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = currentTime;
+    }
+
+    
+    setInterval(updateRealTimeData, 1000);
+
+  
+    updateRealTimeData();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/signalr/VehiclHub"></script> 
+<script>
+    
+    var hub = $.connection.CarController.VehicleHub; 
+
+    
+    $.connection.hub.start();
+
+    
+    hub.client.updateChart = function (data) {
+       
+        vehicleStatusChart.data.datasets[0].data = data;
+        vehicleStatusChart.update();
+    };
+
+    
+    function updateRealTimeData() {
+        var currentTimeElement = document.getElementById('currentTime');
+        var currentTime = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = currentTime;
+    }
+
+    
+    setInterval(updateRealTimeData, 1000);
+
+    
+    updateRealTimeData();
+</script>
+
+    function updateRealTimeData() {
+        var currentTimeElement = document.getElementById('currentTime');
+        var currentTime = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = currentTime;
+    }
+
+   
+    setInterval(updateRealTimeData, 1000);
+
+   
+    updateRealTimeData();
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="VehicleHubs/hubs"></script>
+
+<script>
+  
+    var hub = $.connection.VehicleHub; 
+
+    
+    $.connection.hub.start();
+
+   
+    hub.client.updateChart = function (data) {
+       
+        vehicleStatusChart.data.datasets[0].data = data;
+        vehicleStatusChart.update();
+    };
+
+   
+    function updateRealTimeData() {
+        var currentTimeElement = document.getElementById('currentTime');
+        var currentTime = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = currentTime;
+    }
+
+    setInterval(updateRealTimeData, 1000);
+
+    
+    updateRealTimeData();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/VehicleHub/hubs"></script> 
+
+<script>
+   
+    var hub = $.connection.car_Controller.realTimeHub; 
+
+    
+    $.connection.hub.start();
+
+    
+    hub.client.updateChart = function (data) {
+       
+        vehicleStatusChart.data.datasets[0].data = data;
+        vehicleStatusChart.update();
+    };
+
+   
+    function updateRealTimeData() {
+        var currentTimeElement = document.getElementById('currentTime');
+        var currentTime = new Date().toLocaleTimeString();
+        currentTimeElement.textContent = currentTime;
+    }
+
+    setInterval(updateRealTimeData, 1000);
+
+    
+    updateRealTimeData();
+</script>

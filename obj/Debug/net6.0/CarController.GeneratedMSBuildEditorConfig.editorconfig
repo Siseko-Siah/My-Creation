@@ -1,0 +1,80 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CarController
+build_property.RootNamespace = CarController
+build_property.ProjectDir = C:\Users\Siseko Shezi\Desktop\CarController\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Siseko Shezi\Desktop\CarController
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Makes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFrZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Makes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFrZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Makes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFrZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Makes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFrZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Models/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWxzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Models/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWxzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Models/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWxzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Models/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9kZWxzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Vehicles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVoaWNsZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Vehicles/Reverse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmVoaWNsZXNcUmV2ZXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Siseko Shezi/Desktop/CarController/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t4qdzakf99
